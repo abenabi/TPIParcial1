@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- grupo 06  -->
+<!-- declaracion correspondiente del elemento raiz  con sus respectivos subelementos-->
+ <xs:element name="registro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="responsable" type="xs:string"/>
+        <xs:element name="factura" type="tipofactura" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="periodo" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+<!--creacion del grupo linea factura -->
+<xs:group name="datosfactura">  
+      <xs:sequence>
+      <xs:element name="num" type="xs:integer"/>
+        <xs:element name="cliente" type="tipocliente"/>
+        <xs:element name="direccion" type="tipodireccion"/>
+        <xs:element name="lineafactura" type="tipolineafactura"/>
+        <xs:element name="total" type="tipototal"/>
+      </xs:sequence>
+   </xs:group>  
+  
+ <xs:complexType name="tipofactura">
+         <xs:sequence>
+             <!-- referencia al grupo de elementos-->
+         <xs:group ref="datosfactura"/>
+      </xs:sequence>
+      <xs:attribute name="tipo" type="xs:string" use="required"/>
+ </xs:complexType>
+ 
+  <xs:complexType name="tipodireccion">
+         <xs:choice>
+         <xs:element name="casa" type="xs:string"/>
+         <xs:element name="oficina" type="xs:string"/>
+      </xs:choice>
+      <xs:attribute name="depto" type="xs:string"/>
+      <xs:attribute name="municipio" type="xs:string"/>
+ </xs:complexType>
+
+<xs:complexType name="tipocliente">
+<xs:all>
+<!-- restriccion de longitud  con respecto al nombre del cliente -->
+<xs:element name="nombre">
+   <xs:simpleType>
+      <xs:restriction base="xs:string">
+         <xs:minLength value="3"/>
+         <xs:maxLength value="150"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+
+<xs:element name="documento" type="tipodocumento"/>
+
+      <xs:element name="telefono">
+       <xs:complexType>
+           <xs:simpleContent>
+          <xs:extension base="xs:string">
+          <xs:attribute name="cia">
+         <xs:simpleType>
+         <!-- restriccion de enumeracion para el atributo cia del elemento telefono  -->
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="tigo"/>
+            <xs:enumeration value="claro"/>
+            <xs:enumeration value="movistar"/>
+            <xs:enumeration value="digicel"/>
+          </xs:restriction>
+       </xs:simpleType>
+       </xs:attribute>
+       <xs:attribute name="tipo"/>
+          </xs:extension>
+        </xs:simpleContent>       
+       </xs:complexType>
+      </xs:element>
+
+<!-- expresiones regulares sobre  email -->
+<xs:element name="email">
+   <xs:simpleType>
+     <xs:restriction base="xs:string">
+       <xs:pattern value=".+@.+\..{3,4}"/>
+    </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+</xs:all>
+<xs:attribute name="codigo" type="xs:integer"/>
+
+      <!-- restriccion en las enumeraciones para los atributos sexo del elemento cliente -->
+<xs:attribute name="sexo">
+   <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="masculino"/>
+        <xs:enumeration value="femenino"/>
+        <xs:enumeration value="otro"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:attribute>
+
+ </xs:complexType>
+ 
+ <xs:complexType name="tipodocumento">
+ <xs:choice>
+      <xs:element name="dui">
+       <xs:complexType>
+          <xs:simpleContent>
+          <xs:extension base="xs:string">
+              <xs:attribute name="vence" type="xs:string"/>
+          </xs:extension>
+        </xs:simpleContent>           
+       </xs:complexType>      
+      </xs:element>
+ 
+<xs:element name="pasaporte"/> 
+ 
+
+      </xs:choice>
+ </xs:complexType>
+ 
+<xs:complexType name="tipolineafactura">
+      <xs:all>
+        <xs:element name="codigo">
+            <xs:complexType>
+          <xs:simpleContent>
+          <xs:extension base="xs:string">
+              <xs:attribute name="tipo" type="xs:string"/>
+          </xs:extension>
+        </xs:simpleContent>              
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="detalle"/>
+        <xs:element name="cantidad"/>
+
+        <!--         <xs:element name="valor" type="tipopreciosubtotal"/> -->
+
+        <xs:element name="precio" type="tipopreciosubtotal"/>
+     
+        <xs:element name="subtotal" type="tipopreciosubtotal"/>
+      </xs:all>
+      <xs:attribute name="factura" type="xs:string"/>
+ </xs:complexType>
+
+<xs:complexType name="tipopreciosubtotal">
+<xs:sequence>
+<!-- expresiones regulares sobre el moneda -->
+ 
+<xs:element name="moneda">
+       
+   <xs:simpleType>
+
+     <xs:restriction base="xs:string">
+       <xs:pattern value="[$]{1}"/>
+    </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+<!-- restriccion de total de digitos y digitos de fraccion  junto con la definicion del elemento de tipo simple "valor"-->
+<xs:element name="valor">
+   <xs:simpleType>
+    <xs:restriction base="xs:decimal">
+        <xs:minInclusive value="0.00"/>
+        <xs:maxInclusive value="99999999.99"/>
+        <xs:totalDigits value="8"/>
+        <xs:fractionDigits value="2"/>
+    </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+</xs:sequence>
+ </xs:complexType>
+
+<xs:complexType name="tipototal">
+<xs:sequence>
+<!-- expresiones regulares sobre el moneda -->
+<xs:element name="moneda">
+   <xs:simpleType>
+     <xs:restriction base="xs:string">
+       <xs:pattern value="[$]{1}"/>
+    </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+<!-- restriccion de total de digitos y digitos de fraccion junto con la definicion del elemento de tipo simple "valor"-->
+<xs:element name="valor">
+   <xs:simpleType>
+    <xs:restriction base="xs:decimal">
+        <xs:minInclusive value="0.00"/>
+        <xs:maxInclusive value="99999999.99"/>
+        <xs:totalDigits value="8"/>
+        <xs:fractionDigits value="2"/>
+    </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+</xs:sequence>
+ </xs:complexType>   
+   
+</xs:schema>

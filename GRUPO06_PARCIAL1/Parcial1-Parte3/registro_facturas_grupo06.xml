@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- GRUPO PARTE3  06  -->
+<registro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" periodo="2012-03" xsi:noNamespaceSchemaLocation="registrofacturasgrupo06.xsd">
+    <responsable>Lic. Inocencio P�rez</responsable>
+    <factura tipo="final">
+        <num>564</num>
+        <cliente codigo="2617" sexo="femenino">
+            <nombre>Mar�a V�lez</nombre>
+            <documento>
+                <dui vence="2018-03-03">02349867-9</dui>
+            </documento>
+            <telefono tipo="fijo">24356789</telefono>
+            <email>mariav@gmail.com</email>
+        </cliente>
+        <direccion depto="San Salvador" municipio="San Salvador">
+            <casa>Prados del Bosque Num.23</casa>
+        </direccion>
+        <lineafactura factura="564">
+            <codigo tipo="souvenir">498</codigo>
+            <detalle>Llavero estampas de mi pueblo: Izalco</detalle>
+            <cantidad>10</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>1.13</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>11.30</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>11.30</valor>
+        </total>
+    </factura>
+    <factura tipo="credito">
+        <num>570</num>
+        <cliente codigo="5032" sexo="femenino">
+            <nombre>Julia P�rez</nombre>
+            <documento>
+                <pasaporte pais="USA">A98672340</pasaporte>
+            </documento>
+            <telefono tipo="celular" cia="tigo">78354926</telefono>
+            <email>jperez@sica.com</email>
+        </cliente>
+        <direccion depto="La Libertad" municipio="Antiguo Cuscatlan">
+            <oficina>5 Av. Sur</oficina>
+        </direccion>
+        <lineafactura factura="570">
+            <codigo tipo="pcportatiles">734</codigo>
+            <detalle>netbook acer a240</detalle>
+            <cantidad>3</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>350.00</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>1050.00</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>1050.00</valor>
+        </total>
+    </factura>
+    <factura tipo="credito">
+        <num>575</num>
+        <cliente codigo="5327" sexo="masculino">
+            <nombre>Jhon Smith</nombre>
+            <documento>
+                <pasaporte pais="USA">A98670234</pasaporte>
+            </documento>
+            <telefono tipo="celular" cia="tigo">78923546</telefono>
+            <email>jsmith@usaid.com</email>
+        </cliente>
+        <direccion depto="La Libertad" municipio="Santa Tecla">
+            <oficina>Final 25 Av. Norte</oficina>
+        </direccion>
+        <lineafactura factura="575">
+            <codigo tipo="accesorio_pc">247</codigo>
+            <detalle>Mouse inal�mbrico</detalle>
+            <cantidad>5</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>10.00</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>50.00</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>50.00</valor>
+        </total>
+    </factura>
+    <factura tipo="final">
+        <num>590</num>
+        <cliente codigo="617" sexo="masculino">
+            <nombre>Juan P�rez</nombre>
+            <documento>
+                <pasaporte pais="SLV">A40298367</pasaporte>
+            </documento>
+            <telefono tipo="celular" cia="claro">76023546</telefono>
+            <email>jperez@gmail.com</email>
+        </cliente>
+        <direccion depto="La Paz" municipio="Zacatecoluca">
+            <oficina>28 avenida norte</oficina>
+        </direccion>
+        <lineafactura factura="590">
+            <codigo tipo="perecedero">213</codigo>
+            <detalle>Agua embotellada</detalle>
+            <cantidad>10</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>0.50</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>5.00</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>5.00</valor>
+        </total>
+    </factura>
+    <factura tipo="final">
+        <num>593</num>
+        <cliente codigo="177" sexo="masculino">
+            <nombre>Pedro Portillo</nombre>
+            <documento>
+                <pasaporte pais="SLV">A43698027</pasaporte>
+            </documento>
+            <telefono tipo="celular" cia="claro">76028642</telefono>
+            <email>pportillo@hotmail.com</email>
+        </cliente>
+
+        <direccion depto="Santa Ana" municipio="Metapan">
+            <oficina>Calle poniente 25</oficina>
+        </direccion>
+
+        <lineafactura factura="593">
+            <codigo tipo="perecedero">215</codigo>
+            <detalle>Soda enlatada</detalle>
+            <cantidad>24</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>0.50</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>5.00</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>5.00</valor>
+        </total>
+    </factura>
+    <factura tipo="credito">
+        <num>585</num>
+        <cliente codigo="5327" sexo="masculino">
+            <nombre>Jhon Smith</nombre>
+            <documento>
+                <dui vence="2018-06-03">02810867-0</dui>
+            </documento>
+            <telefono tipo="celular" cia="tigo">78923546</telefono>
+            <email>jsmith@usaid.com</email>
+        </cliente>
+        <direccion depto="La Libertad" municipio="Santa Tecla">
+            <oficina>Final 25 Av. Norte</oficina>
+        </direccion>
+        <lineafactura factura="575">
+            <codigo tipo="accesorio_pc">247</codigo>
+            <detalle>Mouse inal�mbrico</detalle>
+            <cantidad>10</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>10.00</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>100.00</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>100.00</valor>
+        </total>
+    </factura>
+
+
+
+    <!-- 2 facturas de tipo final  -->
+    <factura tipo="final">
+        <num>896</num>
+        <cliente codigo="8974" sexo="masculino">
+            <nombre>Ricardo Antonio</nombre>
+            <documento>
+                <dui vence="2025-11-07">01269875-0</dui>
+            </documento>
+            <telefono tipo="celular" cia="movistar">78965214</telefono>
+            <email>ricar2.ant@hotmail.com</email>
+        </cliente>
+        <direccion depto="San Miguel" municipio="San Miguel">
+            <casa>El Centro 2a avenida Norte, poligono.08</casa>
+        </direccion>
+        <lineafactura factura="895">
+            <codigo tipo="discos">498</codigo>
+            <detalle>Discos exportados de BTS </detalle>
+            <cantidad>8</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>65.99</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>527.92</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>527.92</valor>
+        </total>
+    </factura>
+
+    <factura tipo="final">
+        <num>865</num>
+        <cliente codigo="8975" sexo="femenino">
+            <nombre>Billie Elish</nombre>
+            <documento>
+                <dui vence="2022-06-05">0256148-9</dui>
+            </documento>
+            <telefono tipo="celular" cia="digicel">68963245</telefono>
+            <email>billie.mamasita.elish@gmail.com</email>
+        </cliente>
+        <direccion depto="San Vicente" municipio="San Vicente">
+            <casa>El Centro poligono 05</casa>
+        </direccion>
+        <lineafactura factura="893">
+            <codigo tipo="peras">328</codigo>
+            <detalle>Peras importadas de Tutuxplan, Mexico </detalle>
+            <cantidad>12</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>0.50</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>6.00</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>6.00</valor>
+        </total>
+    </factura>
+
+    <!-- 2 facturas de tipo credito  -->
+    <factura tipo="credito">
+        <num>456</num>
+        <cliente codigo="6325" sexo="femenino">
+            <nombre>Lee Ji-eun</nombre>
+            <documento>
+                <pasaporte pais="COREA DEL SUR">CS89564712</pasaporte>
+            </documento>
+            <telefono tipo="celular" cia="claro">74100023</telefono>
+            <email>iu@gmail.com</email>
+        </cliente>
+        <direccion depto="San Salvador" municipio="Ilopango">
+            <oficina>Centro Urbanoo, Novena Etapa Num 02</oficina>
+        </direccion>
+        <lineafactura factura="654">
+            <codigo tipo="maquillaje">788</codigo>
+            <detalle>Rare Beauty  Deluxe edition</detalle>
+            <cantidad>7</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>42.99</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>300.93</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>300.93</valor>
+        </total>
+    </factura>
+
+    <factura tipo="credito">
+        <num>2405</num>
+        <cliente codigo="5896" sexo="masculino">
+            <nombre>Jose Tyron Gonzalez</nombre>
+            <documento>
+                <pasaporte pais="Venezuela">VN89561236</pasaporte>
+            </documento>
+            <telefono tipo="celular" cia="tigo">74589632</telefono>
+            <email>3lCanserbero@gmail.com</email>
+        </cliente>
+        <direccion depto="Chalatenango" municipio="Chalatenango">
+            <oficina>Calle principal, 10av sur</oficina>
+        </direccion>
+        <lineafactura factura="456">
+            <codigo tipo="microfono">256</codigo>
+            <detalle>Microfono para raperos profesionales</detalle>
+            <cantidad>1</cantidad>
+            <precio>
+                <moneda>$</moneda>
+                <valor>51.99</valor>
+            </precio>
+            <subtotal>
+                <moneda>$</moneda>
+                <valor>51.99</valor>
+            </subtotal>
+        </lineafactura>
+        <total>
+            <moneda>$</moneda>
+            <valor>54.99</valor>
+        </total>
+    </factura>
+
+</registro>
